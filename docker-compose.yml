@@ -1,0 +1,49 @@
+version: '3.5'
+
+services:
+  
+  sum-api-db:
+    image: 'postgres:latest'
+    container_name: sum_api_db_postgres_container
+    environment:
+        #default postgres super user
+        POSTGRES_USER: postgres
+         #default passwor for postgres super user, it is only the required envvar for postgres image
+        POSTGRES_PASSWORD: qwerty
+        #main database if name is not specific thname of super user is use
+        POSTGRES_DB: postgres
+        TZ: America/Argentina/Buenos_Aires
+    volumes:
+       - postgres:/data/postgres
+       - ./src/main/resources/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+    ports:
+      - "5432:5432"
+    networks:
+      - sum_api_network
+    restart: unless-stopped
+    
+  sum-api:
+    image: 'sum-api:latest'
+    build:
+      context: .
+    container_name: sum_api_container
+    depends_on:
+      - sum-api-db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://sum-api-db:5432/sumdb
+      - SPRING_DATASOURCE_USERNAME=marcos
+      - SPRING_DATASOURCE_PASSWORD=secretpassword
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_SHOW_SQL=true
+         
+    ports:
+      - 8081:8081
+    networks:
+      - sum_api_network
+  
+networks:
+  sum_api_network:
+    driver: bridge
+volumes:
+    postgres:
+    
