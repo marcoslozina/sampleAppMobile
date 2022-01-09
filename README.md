@@ -1,6 +1,10 @@
 ## General info
 These are the instructions for compiling and running the challenge project.
 
+## Prerequisites
+* Docker installed
+* Docker-compose installed
+
 ## Setup
 To run this project, install it locally using commands:
 
