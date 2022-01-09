@@ -2,6 +2,7 @@
 These are the instructions for compiling and running the challenge project.
 
 ## Prerequisites
+* Git installed
 * Docker installed
 * Docker-compose installed
 

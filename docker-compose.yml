@@ -35,6 +35,7 @@ services:
       - SPRING_DATASOURCE_PASSWORD=secretpassword
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
       - SPRING_JPA_SHOW_SQL=true
+      - JWT_PASSWORD=mySecretKey
          
     ports:
       - 8081:8081
