@@ -37,7 +37,7 @@ public class TraceServiceImpl implements TraceService {
 		}
 		return null;
 	}
-	//!trace.getUrl().equals("http://localhost:8081/api/v1/")
+	
 	private boolean isUrlToTrack(Trace trace) {
 		return !trace.getUrl().contains("traces") && !trace.getUrl().contains("swagger")
 				&& !trace.getUrl().contains("api-docs")
