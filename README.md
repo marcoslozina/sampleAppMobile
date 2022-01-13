@@ -17,7 +17,7 @@ Este archivo contiene información general para poder descargar, compilar y ejec
 ## Prerrequisitos
 * Tener instalado Git
 * Tener instalado Docker 
-* Temer instalado Docker-compose
+* Tener instalado Docker-compose
 
 ## Servicios expuestos
 * Documentation API:GET http://localhost:8081/api/v1/swagger-ui.html
