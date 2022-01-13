@@ -13,7 +13,7 @@
 	<artifactId>suma-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>suma-api</name>
-	<description>This project is a challenge to enter the Tenpo company</description>
+	<description>Project sample/description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
