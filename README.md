@@ -14,22 +14,11 @@ Este archivo contiene información general para poder descargar, compilar y ejec
 * Debes agregar un Postman Collection o Swagger para que probemos tu API.
 * Tu código debe estar disponible en un repositorio público, junto con las instrucciones de cómo desplegar el servicio y cómo utilizarlo.
 
-
-
 ## Prerrequisitos
 * Tener instalado Git
 * Tener instalado Docker 
 * Temer instalado Docker-compose
 
-## Despliegue del proyecto
-Para ejecutar el proyecto en local, seguir las siguientes instrucciones:
-
-```
-$ git clone https://github.com/marcoslozina/tenpo.git
-$ cd tenpo
-$ mvnw clean package
-$ docker-compose up --build
-```
 ## Servicios expuestos
 * Documentation API:GET http://localhost:8081/api/v1/swagger-ui.html
 * Signup:POST http://localhost:8081/api/v1/signup
@@ -37,8 +26,5 @@ $ docker-compose up --build
 * Sum:GET http://localhost:8081/api/v1/sum?value1=8&value2=5
 * Traces:GET http://localhost:8081/api/v1/traces?pageNumber=0&pageSize=10
 
-## Información adicional
-* Las colecciones para importar en postman se encuentran en el directorio: /src/main/resources/
-* En el siguiente video explico y muestro como descargar y desplegar el proyecto siguiendo este instructivo: https://www.youtube.com/watch?v=nIH92WRmIy8
 
 	
